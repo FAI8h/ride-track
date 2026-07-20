@@ -1,6 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import authRoutes from './routes/auth.routes.js';
+import rideRoutes from './routes/ride.routes.js'
 
 const app = express();
 
@@ -16,7 +18,7 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'RideTrack Server is running' });
 });
 
-// TODO: Add your Express routes here (Auth, Rides, etc.)
-// app.use('/api/auth', authRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/rides', rideRoutes);
 
 export default app;

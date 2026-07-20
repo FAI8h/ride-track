@@ -3,7 +3,7 @@ import { WebSocket } from "ws";
 // --- CONFIG ---
 const NGROK_URL = 'wss://unscandalized-sean-undistractingly.ngrok-free.dev/ws'; // Your ngrok wss URL
 const GHOST_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhNWRhOTQwMmQxOWYwZTI1NjQ3Y2I2NSIsImlhdCI6MTc4NDUyMzA3Mn0.MfpoWnFOWv74mQD02APlAvPySSul82z5H2jwBfEcHiA';
-const RIDE_ID = '6a5da05ce3f39c027a90f68c';
+const RIDE_ID = '6a5dc99147f15310407732a4';
 // --------------
 
 console.log('👻 Starting Ghost Rider...');
