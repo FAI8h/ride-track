@@ -121,6 +121,7 @@ async function handleLocationUpdate(ws, payload) {
     timestamp: Date.now()
   };
 
+    console.log(`📍 Received location from ${ws.userId} in room ${rideId}`);
   // 1. Save latest to Redis for fast retrieval
   await redisClient.hSet(`ride:${rideId}:locations`, ws.userId, JSON.stringify(locationData));
 
@@ -145,4 +146,5 @@ function broadcastToRoom(rideId, message, excludeWs = null) {
       client.send(data);
     }
   });
+    console.log(`📡 Broadcasted to room ${rideId}`);
 }
